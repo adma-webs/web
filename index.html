@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="ADMA HEAVY AND LIGHT EQUIPMENT RENTAL LLC - Construction Equipment Rental in Deira, Dubai">
@@ -29,11 +28,12 @@
       font-size: 18px;
     }
     header {
-     background: var(--primary-color);
+      background: var(--primary-color);
       color: white;
       padding: 30px 20px;
       text-align: center;
       animation: fadeInDown 1.5s ease-in-out;
+      position: relative;
     }
     @keyframes fadeInDown {
       from { opacity: 0; transform: translateY(-50px); }
@@ -51,10 +51,6 @@
       padding-top: 10px;
       animation: slideInUp 1.2s ease-in-out;
     }
-    @keyframes slideInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
     nav a {
       color: white;
       text-decoration: none;
@@ -68,12 +64,35 @@
     }
     .menu-toggle {
       display: none;
-      font-size: 24px;
+      font-size: 26px;
       color: white;
       position: absolute;
       right: 20px;
-      top: 40px;
+      top: 35px;
       cursor: pointer;
+    }
+    @keyframes slideInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav {
+        display: none;
+        flex-direction: column;
+        background: var(--primary-color);
+        padding: 20px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+      nav.active {
+        display: flex;
+      }
     }
     section {
       padding: 100px 20px;
@@ -188,22 +207,10 @@
     button:hover {
       background-color: #c28e1e;
     }
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-      }
-      .hero h2 {
-        font-size: 42px;
-      }
-      .hero p {
-        font-size: 20px;
-      }
-    }
   </style>
-<link rel="shortcut icon" href="media/logo.png" type="image/png">
+  <link rel="shortcut icon" href="media/logo.png" type="image/png">
 </head>
 <body>
-
   <header>
     <img src="media/logo_truck-bg.png" alt="ADMA Logo" class="logo">
     <h1>ADMA HEAVY AND LIGHT EQUIPMENT RENTAL LLC</h1>
@@ -225,15 +232,10 @@
 
   <section id="about" data-aos="fade-up">
     <h2>About Us</h2>
-    <p>Founded in the heart of the UAE’s construction boom, ADMA Heavy and Light Equipment Rental LLC has grown into one of Dubai’s most reliable and well-equipped partners for infrastructure development. For over 9 years, we’ve played a key role in powering the nation’s public and private sector projects by providing cutting-edge construction equipment and ready-mix concrete services.
-
-From our base in Deira, Dubai, we manage an extensive fleet that includes cranes, bulldozers, concrete pumps, trailers, and mixers — all maintained to the highest safety and performance standards. ADMA doesn’t just rent machines; we deliver peace of mind, reliability, and logistical efficiency to project managers across the UAE.</p>
-<br>
-<p>Our proud track record includes supporting 230+ contractors, completing over 2.8 million cubic meters of concrete projects in Al Ain and 2.3 million in Sharjah, and servicing dozens of large-scale construction sites across Dubai. Whether it’s a major commercial skyscraper, a residential complex, or a private villa foundation, our specialized fleet and technical team are ready to handle the most demanding job requirements.</p>
-<br>
-<p>ADMA is more than a rental service — we are a strategic partner. Our clients return not only for our competitive pricing and specialized fleet, but also for our customer-first approach, responsive support, and deep understanding of project timelines and quality control.
-
-As the UAE continues to build its future, we remain committed to scaling alongside it — growing our fleet, refining our services, and remaining at the forefront of innovation in concrete logistics and equipment rental.</p>
+    <p>Founded in the heart of the UAE’s construction boom, ADMA Heavy and Light Equipment Rental LLC has grown into one of Dubai’s most reliable and well-equipped partners for infrastructure development. For over 9 years, we’ve played a key role in powering the nation’s public and private sector projects by providing cutting-edge construction equipment and ready-mix concrete services.</p>
+    <p>From our base in Deira, Dubai, we manage an extensive fleet that includes cranes, bulldozers, concrete pumps, trailers, and mixers — all maintained to the highest safety and performance standards. ADMA doesn’t just rent machines; we deliver peace of mind, reliability, and logistical efficiency to project managers across the UAE.</p>
+    <p>Our proud track record includes supporting 230+ contractors, completing over 2.8 million cubic meters of concrete projects in Al Ain and 2.3 million in Sharjah, and servicing dozens of large-scale construction sites across Dubai. Whether it’s a major commercial skyscraper, a residential complex, or a private villa foundation, our specialized fleet and technical team are ready to handle the most demanding job requirements.</p>
+    <p>ADMA is more than a rental service — we are a strategic partner. Our clients return not only for our competitive pricing and specialized fleet, but also for our customer-first approach, responsive support, and deep understanding of project timelines and quality control. As the UAE continues to build its future, we remain committed to scaling alongside it — growing our fleet, refining our services, and remaining at the forefront of innovation in concrete logistics and equipment rental.</p>
     <img src="media/bg-1.jpg" alt="Concrete Pump About" class="feature">
   </section>
 
@@ -246,7 +248,6 @@ As the UAE continues to build its future, we remain committed to scaling alongsi
   <section id="concrete" data-aos="fade-up">
     <h2>Concrete Works</h2>
     <p>Concrete is the backbone of every modern structure, and at ADMA, we take pride in delivering it with precision, power, and performance. Our concrete services are powered by a fleet of state-of-the-art pumps ranging from compact line pumps to large-scale boom systems reaching up to 63 meters. These allow us to reach inaccessible locations and reduce manual labor, ensuring cleaner, faster, and more accurate pours.</p>
-    <br>
     <p>We offer ready-mix solutions tailored to each project’s specifications. Whether it’s a multi-storey commercial tower, a tight urban residential build, or infrastructure like roads and parking structures, our concrete works are executed with a strict adherence to deadlines and technical requirements. Our experienced crew, logistical support, and pump operators ensure safe operation and smooth coordination on every site.</p>
     <img src="media/bg-2.webp" class="feature">
   </section>
@@ -255,12 +256,12 @@ As the UAE continues to build its future, we remain committed to scaling alongsi
     <h2>Get a Quote</h2>
     <p>Use the form below to get your personalized quote!</p>
     <form action="https://formspree.io/f/mnndyyrp" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <input type="tel" name="phone" placeholder="Phone Number">
-  <textarea name="message" rows="4" placeholder="Project Details (Location, Equipment Needed, Duration)"></textarea>
-  <button type="submit">Submit Request</button>
-</form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Phone Number">
+      <textarea name="message" rows="4" placeholder="Project Details (Location, Equipment Needed, Duration)"></textarea>
+      <button type="submit">Submit Request</button>
+    </form>
   </section>
 
   <section id="profile" data-aos="zoom-in">
@@ -277,6 +278,7 @@ As the UAE continues to build its future, we remain committed to scaling alongsi
   <footer>
     <p>&copy; 2025 ADMA HEAVY AND LIGHT EQUIPMENT RENTAL LLC. All rights reserved.</p>
   </footer>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ once: true, duration: 1200 });
